@@ -1,2 +1,1 @@
-# game_v2
-Discord game v2
+# game_v1
