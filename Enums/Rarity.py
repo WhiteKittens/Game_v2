@@ -23,11 +23,11 @@ class Rarity(Enum):
     Common = 5, 1000, 1, 1, 2
 
     @classmethod
-    def random_rarity(cls, item_level, rarity_floor):
+    def random_rarity(cls, item_level, rarity_floor=1):
         full_list = []
         for rarity in cls:
-            if rarity_floor <= rarity.value[3] <= item_level:
-                full_list += [rarity] * rarity.value[2]
+            if rarity_floor - 30 <= rarity.value[2] <= item_level:
+                full_list += [rarity] * rarity.value[1]
         return choice(full_list)
 
     def random_stats(self):
@@ -40,9 +40,13 @@ class Rarity(Enum):
                 full_list += [attribute]
         return sample(full_list, self.value[4])
 
-    def full_stat_dict(self, equipment):
+    def full_stat_dict(self, equipment, floor_rarity=1):
+        """
+        :rtype: dict
+        """
         full_list = dict()
-        for stat in self.random_stats() + self.random_attributes(equipment.get_equipment_type):
-            tier = EquipmentTier.random_tier(equipment.get_equipment_level)
+        for stat in self.random_stats() + self.random_attributes(equipment.get_equipment_type()):
+            tier = EquipmentTier.random_tier(equipment.get_equipment_level(), floor_rarity)
             value = randint(tier.value[2][0], tier.value[2][1]) * stat.value[2]
             full_list[stat.name] = (tier, value)
+        return full_list
