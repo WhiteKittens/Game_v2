@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90411130-d707-49bc-b0aa-dd2026fb5fa0" name="Default Changelist" comment="" />
+    <list default="true" id="90411130-d707-49bc-b0aa-dd2026fb5fa0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/game_v1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/game_v1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enums/Attributes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Enums/Attributes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enums/EquipmentTier.py" beforeDir="false" afterPath="$PROJECT_DIR$/Enums/EquipmentTier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enums/Rarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Enums/Rarity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enums/Stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/Enums/Stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameHandler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Character.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Equipment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/SoloAdventuresHandler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Weapon.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +73,16 @@
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="17" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="17" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FavoritesManager">
@@ -67,22 +90,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enums/EquipmentTier.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/model/Weapon.py">
+        <entry file="file://$PROJECT_DIR$/Enums/EquipmentTier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+            <state relative-caret-position="17">
+              <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#0#21#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,7 +124,6 @@
         <option value="$USER_HOME$/Downloads/last-python(1).py" />
         <option value="$PROJECT_DIR$/enums/EquipmentTier.py" />
         <option value="$PROJECT_DIR$/enums/Spells.py" />
-        <option value="$PROJECT_DIR$/model/Weapon.py" />
         <option value="$PROJECT_DIR$/enums/Attributes.py" />
         <option value="$PROJECT_DIR$/enums/Rarity.py" />
         <option value="$PROJECT_DIR$/enums/GameClasses.py" />
@@ -122,6 +135,7 @@
         <option value="$PROJECT_DIR$/enums/ArmourType.py" />
         <option value="$PROJECT_DIR$/enums/WeaponType.py" />
         <option value="$PROJECT_DIR$/enums/Stats.py" />
+        <option value="$PROJECT_DIR$/model/Weapon.py" />
       </list>
     </option>
   </component>
@@ -150,18 +164,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="game_v1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="game_v1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="game_v1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="game_v1" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="game_v1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="game_v1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="game_v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="game_v2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -174,7 +178,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -366,11 +370,33 @@
       <option name="project" value="LOCAL" />
       <updated>1540650201739</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Interface weapon part 1">
+      <created>1540650279720</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1540650279720</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Interface weapon part 1">
+      <created>1540650340898</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1540650340898</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Interface weapon part 1">
+      <created>1540650349177</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1540650349177</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6885593" visible="true" weight="0.24253732" />
       <window_info id="Structure" order="1" sideWeight="0.31144068" side_tool="true" weight="0.24010417" />
@@ -470,7 +496,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/interface/interface.py" />
     <entry file="file://$USER_HOME$/Downloads/last-python(1).py" />
-    <entry file="file://$PROJECT_DIR$/enums/Spells.py">
+    <entry file="file://$PROJECT_DIR$/Enums/Spells.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
@@ -484,14 +510,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enums/GameClasses.py">
+    <entry file="file://$PROJECT_DIR$/Enums/GameClasses.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enums/SoloNPC.py">
+    <entry file="file://$PROJECT_DIR$/Enums/SoloNPC.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
@@ -526,54 +552,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enums/Rarity.py">
+    <entry file="file://$PROJECT_DIR$/Enums/Rarity.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enums/Stats.py">
+    <entry file="file://$PROJECT_DIR$/Enums/Stats.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enums/Attributes.py">
+    <entry file="file://$PROJECT_DIR$/Enums/Attributes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enums/WeaponType.py">
+    <entry file="file://$PROJECT_DIR$/Enums/WeaponType.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enums/ArmourType.py">
+    <entry file="file://$PROJECT_DIR$/Enums/ArmourType.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enums/EquipmentTier.py">
+    <entry file="file://$PROJECT_DIR$/model/Weapon.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="490">
+          <caret line="67" column="26" lean-forward="true" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Weapon.py">
+    <entry file="file://$PROJECT_DIR$/Enums/EquipmentTier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="17">
+          <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
