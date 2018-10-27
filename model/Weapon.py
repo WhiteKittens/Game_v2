@@ -80,5 +80,3 @@ class Weapon:
 
     def get_stats_and_attr(self):
         return dict(self.equipment_attributes.items() | self.equipment_stats.items())
-
-print("fck off")
