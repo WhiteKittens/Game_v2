@@ -1,0 +1,29 @@
+Welcome to this game #player
+
+
+
+You currently do not have any character!
+Press sword if you want to create one
+Or press shield if you want to quit!
+
+
+
+
+
+
+
+
+======================================================
+
+
+
+
+
+
+
+
+
+
+
+
+

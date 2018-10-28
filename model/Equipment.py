@@ -29,9 +29,7 @@ class Equipment:
         return_string += "%s:\n" % self.equipment_type.name.replace("_", " ")
         return_string += "  Rarity: %s" % self.rarity.name.lower().replace("_", " ").capitalize()
         for stat in self.equipment_stats:
-            return_string += "\n\t\t%-8s%-25s:  %6.0f" % (
+            return_string += "\n\t\t%-8s%-28s:  %6.0f" % (
                 self.equipment_stats[stat][0].value[3], stat.lower().replace("_", " "), self.equipment_stats[stat][1])
         return return_string
 
-
-print(Equipment(100, 0))

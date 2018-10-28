@@ -19,3 +19,6 @@ class Player:
 
     def get_current_character(self):
         return self.current_character
+
+    def player_has_character(self):
+        return len(self.characters) != 0
