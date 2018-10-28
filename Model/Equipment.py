@@ -34,4 +34,4 @@ class Equipment:
         return return_string
 
 
-print(Equipment(100, 100))
+print(Equipment(100, 0))

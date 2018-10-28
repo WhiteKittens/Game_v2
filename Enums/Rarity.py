@@ -15,7 +15,7 @@ class Rarity(Enum):
     3) #Stats
     4) #Attributes
     """
-    Game_Breaker = 0, 1, 150, 3, 6
+    Game_Breaker = 0, 1, 150, 3, 8
     Lost_Relic = 1, 2, 85, 3, 4
     Legendary = 2, 15, 65, 2, 4
     Rare = 3, 100, 45, 2, 3
