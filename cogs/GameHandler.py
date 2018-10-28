@@ -20,16 +20,16 @@ class GameHandler:
     async def start(self, ctx):
         self.ctx = ctx
         self.player = Player(ctx.message.author.id)
-        await self.start_game_session()
+        await self.login_screen()
 
-    async def start_game_session(self):
-        await self.handle_image()
+    async def login_screen(self):
+        await self.init_image()
         if not self.player.player_has_character():
             await self.ctx.bot.say(self.x.print_equipment("WelcomeScreen.txt", self.ctx))
         else:
             await self.ctx.bot.say("LOLOL")
 
-    async def handle_image(self):
+    async def init_image(self):
         self.e.set_image(
             url="https://cdn.discordapp.com/attachments/501831331035086861/506085028392992768/DarkForest.png")
         self.msg = await self.ctx.bot.send_message(self.ctx.message.channel, embed=self.e)
