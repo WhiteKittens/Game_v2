@@ -1,9 +1,9 @@
 from enum import Enum
 from random import choice, randint, sample
 
-from Enums.Attributes import Attributes
-from Enums.EquipmentTier import EquipmentTier
-from Enums.Stats import Stats
+from enums.Attributes import Attributes
+from enums.EquipmentTier import EquipmentTier
+from enums.Stats import Stats
 
 
 class Rarity(Enum):

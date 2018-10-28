@@ -1,8 +1,8 @@
-from Enums.Attributes import *
-from Enums.EquipmentTier import *
-from Enums.EquipmentType import *
-from Enums.Stats import *
-from Enums.Rarity import *
+from enums.Attributes import *
+from enums.EquipmentTier import *
+from enums.EquipmentType import *
+from enums.Stats import *
+from enums.Rarity import *
 
 
 class Equipment:
