@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90411130-d707-49bc-b0aa-dd2026fb5fa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dialogue/WelcomeScreen.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cogs/GameHandler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/PrintHandler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/DarkForest.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/GameCommands.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/GameCommands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/moodel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Equipment.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Equipment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cogs/GameHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/GameHandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/PrintHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/PrintHandler.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +16,7 @@
     <SUITE FILE_PATH="coverage/game_v1$Equipment.coverage" NAME="Equipment Coverage Results" MODIFIED="1540063894760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/game_v1$Character.coverage" NAME="Character Coverage Results" MODIFIED="1540276244388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/game_v2$PrintHandler.coverage" NAME="PrintHandler Coverage Results" MODIFIED="1540735519558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
-    <SUITE FILE_PATH="coverage/game_v2$main.coverage" NAME="main Coverage Results" MODIFIED="1540743247614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/game_v2$main.coverage" NAME="main Coverage Results" MODIFIED="1540743562027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/game_v2$Equipment__1_.coverage" NAME="Equipment (1) Coverage Results" MODIFIED="1540665521831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
     <SUITE FILE_PATH="coverage/game_v1$Weapon.coverage" NAME="Weapon Coverage Results" MODIFIED="1540213415259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/game_v2$Player.coverage" NAME="Player Coverage Results" MODIFIED="1540726595978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
@@ -132,7 +125,7 @@
           <entry key="dummy" value="18" />
           <entry key="gitignore" value="17" />
           <entry key="json" value="39" />
-          <entry key="py" value="4426" />
+          <entry key="py" value="4533" />
           <entry key="txt" value="284" />
         </counts>
       </usages-collector>
@@ -140,7 +133,7 @@
         <counts>
           <entry key="JSON" value="39" />
           <entry key="PLAIN_TEXT" value="563" />
-          <entry key="Python" value="4426" />
+          <entry key="Python" value="4533" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -152,18 +145,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cogs/GameHandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+            <state relative-caret-position="720">
+              <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
                 <element signature="e#402#417#0" />
-                <marker date="1540743536119" expanded="true" signature="193:194" ph="..." />
-                <marker date="1540743536119" expanded="true" signature="459:467" ph="..." />
-                <marker date="1540743536119" expanded="true" signature="1179:1188" ph="..." />
-                <marker date="1540743536119" expanded="true" signature="1332:1522" ph="..." />
+                <marker date="1540744007920" expanded="true" signature="193:194" ph="..." />
+                <marker date="1540744007920" expanded="true" signature="459:467" ph="..." />
+                <marker date="1540744007920" expanded="true" signature="1158:1167" ph="..." />
+                <marker date="1540744007920" expanded="true" signature="1311:1501" ph="..." />
               </folding>
             </state>
           </provider>
@@ -181,14 +174,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/PrintHandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+            <state relative-caret-position="572">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
-                <marker date="1540742353142" expanded="true" signature="59:60" ph="..." />
-                <marker date="1540742353142" expanded="true" signature="59:104" ph="..." />
+                <marker date="1540744007927" expanded="true" signature="19:20" ph="..." />
+                <marker date="1540744007927" expanded="true" signature="19:64" ph="..." />
+                <marker date="1540744007927" expanded="true" signature="358:897" ph="..." />
               </folding>
             </state>
           </provider>
@@ -271,8 +265,8 @@
         <option value="$PROJECT_DIR$/cogs/GameCommands.py" />
         <option value="$PROJECT_DIR$/model/Equipment.py" />
         <option value="$PROJECT_DIR$/Dialogue/WelcomeScreen.txt" />
-        <option value="$PROJECT_DIR$/model/PrintHandler.py" />
         <option value="$PROJECT_DIR$/cogs/GameHandler.py" />
+        <option value="$PROJECT_DIR$/model/PrintHandler.py" />
       </list>
     </option>
   </component>
@@ -712,7 +706,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540727633161</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="pff">
+      <created>1540743540300</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1540743540300</updated>
+    </task>
+    <task id="LOCAL-00025" summary="pff">
+      <created>1540743686943</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1540743686943</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView">
@@ -734,7 +742,7 @@
       <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.32944915" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32944915" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32944915" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32944915" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5148305" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1053,17 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/PrintHandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
-          <folding>
-            <marker date="1540742353142" expanded="true" signature="59:60" ph="..." />
-            <marker date="1540742353142" expanded="true" signature="59:104" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cogs/GameCommands.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1076,15 +1073,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cogs/GameHandler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+        <state relative-caret-position="720">
+          <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
             <element signature="e#402#417#0" />
-            <marker date="1540743536119" expanded="true" signature="193:194" ph="..." />
-            <marker date="1540743536119" expanded="true" signature="459:467" ph="..." />
-            <marker date="1540743536119" expanded="true" signature="1179:1188" ph="..." />
-            <marker date="1540743536119" expanded="true" signature="1332:1522" ph="..." />
+            <marker date="1540744007920" expanded="true" signature="193:194" ph="..." />
+            <marker date="1540744007920" expanded="true" signature="459:467" ph="..." />
+            <marker date="1540744007920" expanded="true" signature="1158:1167" ph="..." />
+            <marker date="1540744007920" expanded="true" signature="1311:1501" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/PrintHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <marker date="1540744007927" expanded="true" signature="19:20" ph="..." />
+            <marker date="1540744007927" expanded="true" signature="19:64" ph="..." />
+            <marker date="1540744007927" expanded="true" signature="358:897" ph="..." />
           </folding>
         </state>
       </provider>

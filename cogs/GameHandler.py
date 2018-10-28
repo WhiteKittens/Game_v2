@@ -25,7 +25,7 @@ class GameHandler:
     async def login_screen(self):
         await self.init_image()
         if not self.player.player_has_character():
-            await self.ctx.bot.say(self.x.print_equipment("WelcomeScreen.txt", self.ctx))
+            await self.ctx.bot.say(self.x.print_file("WelcomeScreen.txt", self.ctx))
         else:
             await self.ctx.bot.say("LOLOL")
 
