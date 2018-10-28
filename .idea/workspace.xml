@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90411130-d707-49bc-b0aa-dd2026fb5fa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/model/Player.py" afterDir="false" />
+    <list default="true" id="90411130-d707-49bc-b0aa-dd2026fb5fa0" name="Default Changelist" comment="pff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Character.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Character.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,25 +101,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="8" />
+          <entry key="json" value="1" />
+          <entry key="py" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="8" />
+          <entry key="JSON" value="1" />
+          <entry key="Python" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="12" />
-          <entry key="py" value="1775" />
-          <entry key="txt" value="5" />
+          <entry key="py" value="1820" />
+          <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Python" value="1775" />
+          <entry key="PLAIN_TEXT" value="20" />
+          <entry key="Python" value="1820" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -153,17 +153,39 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Player.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="286">
+              <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
               <folding>
+                <element signature="e#104#207#0" />
                 <element signature="e#226#271#0" />
                 <element signature="e#326#348#0" />
                 <element signature="e#453#495#0" />
-                <marker date="1540726872312" expanded="true" signature="54:59" ph="..." />
+                <element signature="e#552#581#0" />
+                <marker date="1540726921321" expanded="true" signature="54:59" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1680">
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -307,7 +329,7 @@
             <path>
               <item name="game_v2" type="b2602c69:ProjectViewProjectNode" />
               <item name="game_v2" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -321,6 +343,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Custom" />
   </component>
   <component name="RunDashboard">
@@ -518,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540724482162</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="pff">
+      <created>1540726951891</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1540726951891</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -534,12 +564,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6885593" visible="true" weight="0.24739583" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6885593" visible="true" weight="0.24739583" />
       <window_info id="Structure" order="1" sideWeight="0.31144068" side_tool="true" weight="0.24010417" />
       <window_info id="Favorites" order="2" sideWeight="0.31144068" side_tool="true" weight="0.24010417" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32944915" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32944915" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32944915" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.59002167" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -625,7 +655,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
     <MESSAGE value="Interface weapon part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="pff" />
+    <option name="LAST_COMMIT_MESSAGE" value="pff" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/GameHandler.py" />
@@ -744,14 +775,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/Player.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="286">
+          <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding>
+            <element signature="e#104#207#0" />
             <element signature="e#226#271#0" />
             <element signature="e#326#348#0" />
             <element signature="e#453#495#0" />
-            <marker date="1540726872312" expanded="true" signature="54:59" ph="..." />
+            <element signature="e#552#581#0" />
+            <marker date="1540726921321" expanded="true" signature="54:59" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1680">
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
         </state>
       </provider>
     </entry>
