@@ -12,6 +12,7 @@ class GameHandler:
 
     def __init__(self, sample_bot):
         self.msg = None
+        self.msg_screen = None
         self.ctx = None
         self.player = None
         self.sample_bot = sample_bot
@@ -20,14 +21,30 @@ class GameHandler:
     async def start(self, ctx):
         self.ctx = ctx
         self.player = Player(ctx.message.author.id)
+        await self.init_image()
+        self.msg_screen = await self.ctx.bot.say(".")
         await self.login_screen()
 
     async def login_screen(self):
-        await self.init_image()
         if not self.player.player_has_character():
-            await self.ctx.bot.say(self.x.print_file("WelcomeScreen.txt", self.ctx))
+            await self.ctx.bot.edit_message(self.msg_screen, self.x.print_file("WelcomeScreen.txt", self.ctx))
+            emoji = await self.wait_on_control(GameControls.SWORDS.value[0])
+            if emoji == GameControls.SWORDS.value[0]:
+                self.player.create_character("Test")
+                await self.login_screen()
         else:
-            await self.ctx.bot.say("LOLOL")
+            welcome = self.x.print_file("WelcomeBackScreen.txt", self.ctx)
+            await self.ctx.bot.edit_message(self.msg_screen, welcome)
+        await self.wait_on_control(GameControls.all_emojis())
+
+    async def wait_on_control(self, expected):
+        done = False
+        while not done:
+            reaction = await self.ctx.bot.wait_for_reaction(GameControls.all_emojis(), message=self.msg)
+            await self.ctx.bot.remove_reaction(self.msg, reaction.reaction.emoji, reaction.user)
+            if reaction.reaction.emoji in expected:
+                return reaction.reaction.emoji
+        return None
 
     async def init_image(self):
         self.e.set_image(
@@ -39,8 +56,8 @@ class GameHandler:
         for smiley in list(GameControls):
             await self.ctx.bot.add_reaction(self.msg, smiley.value[0])
 
-    async def change_background(self):
-        self.e.set_image(url="https://cdn.discordapp.com/attachments/505792603430715395/505792679657865240/latest.png")
+    async def change_background(self, url):
+        self.e.set_image(url=url)
         await self.ctx.bot.edit_message(self.msg, embed=self.e)
 
     async def get_ctx(self):

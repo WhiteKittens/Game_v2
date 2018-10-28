@@ -1,4 +1,4 @@
-Welcome to this game #player
+Welcome to Quinten & legendary Tomato #player
 
 
 
@@ -6,24 +6,4 @@ You currently do not have any character!
 Press sword if you want to create one
 Or press shield if you want to quit!
 
-
-
-
-
-
-
-
-======================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
+=======================================================

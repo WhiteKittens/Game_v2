@@ -1,17 +1,17 @@
 class Character:
     EQUIPMENT_SLOTS = 5
     ITEM_STORAGE = 20
-    worn_equipment: []
-    character_inventory: []
 
     def __init__(self, character_name):
         self.character_name = character_name
+        self.worn_equipment = []
+        self.character_inventory = []
 
         self._init_character_inventory()
 
     def _init_character_inventory(self):
         for slot in range(self.EQUIPMENT_SLOTS):
-            self.worn_equipment[slot] = None
+            self.worn_equipment += [None]
         return
 
     def store_item(self, equipment):

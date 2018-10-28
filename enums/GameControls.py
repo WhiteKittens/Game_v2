@@ -5,12 +5,19 @@ class GameControls(Enum):
     """
 
     """
-    UP = "⬆"
-    DOWN = "⬇"
-    LEFT = "⬅"
-    RIGHT = "➡"
-    SWORDS = "⚔"
-    SHIELD = "🛡"
-    FLAG = "🏳"
-    HEARTH = "💗"
-    WORLD = "🗺"
+    UP = "⬆", 0
+    DOWN = "⬇", 1
+    LEFT = "⬅", 2
+    RIGHT = "➡", 3
+    SWORDS = "⚔", 4
+    SHIELD = "🛡", 5
+    FLAG = "🏳", 6
+    HEARTH = "💗", 7
+    WORLD = "🗺", 8
+
+    @classmethod
+    def all_emojis(cls):
+        return_list = []
+        for emoji in list(cls):
+            return_list += [emoji.value[0]]
+        return return_list
