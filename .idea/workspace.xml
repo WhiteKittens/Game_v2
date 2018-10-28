@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90411130-d707-49bc-b0aa-dd2026fb5fa0" name="Default Changelist" comment="Interface weapon part 1">
-      <change afterPath="$PROJECT_DIR$/model/Character.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/game_v1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/game_v1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="90411130-d707-49bc-b0aa-dd2026fb5fa0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/model/Player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enums/Attributes.py" beforeDir="false" afterPath="$PROJECT_DIR$/enums/Attributes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enums/EquipmentTier.py" beforeDir="false" afterPath="$PROJECT_DIR$/enums/EquipmentTier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enums/EquipmentType.py" beforeDir="false" afterPath="$PROJECT_DIR$/enums/EquipmentType.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enums/Rarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/enums/Rarity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enums/Stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/enums/Stats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Character.py" beforeDir="false" afterPath="$PROJECT_DIR$/enums/GameControls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Equipment.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Equipment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/game_commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/GameCommands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Character.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Character.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +17,7 @@
     <SUITE FILE_PATH="coverage/game_v1$Character.coverage" NAME="Character Coverage Results" MODIFIED="1540276244388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/game_v2$Equipment__1_.coverage" NAME="Equipment (1) Coverage Results" MODIFIED="1540665521831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
     <SUITE FILE_PATH="coverage/game_v1$Weapon.coverage" NAME="Weapon Coverage Results" MODIFIED="1540213415259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/game_v2$Player.coverage" NAME="Player Coverage Results" MODIFIED="1540726595978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="481171235">
@@ -111,24 +103,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="7" />
+          <entry key="py" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="7" />
+          <entry key="Python" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="12" />
-          <entry key="py" value="1242" />
+          <entry key="py" value="1775" />
+          <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="1242" />
+          <entry key="PLAIN_TEXT" value="17" />
+          <entry key="Python" value="1775" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -140,20 +133,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Character.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="330">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
+                <element signature="e#163#249#0" />
                 <element signature="e#250#350#0" />
                 <element signature="e#391#579#0" />
                 <element signature="e#640#819#0" />
                 <element signature="e#834#1400#0" />
-                <marker date="1540724429786" expanded="true" signature="16:21" ph="..." />
-                <marker date="1540724429786" expanded="true" signature="16:115" ph="..." />
-                <marker date="1540724429786" expanded="true" signature="241:356" ph="..." />
-                <marker date="1540724429786" expanded="true" signature="388:397" ph="..." />
+                <marker date="1540724589946" expanded="true" signature="16:21" ph="..." />
+                <marker date="1540724589946" expanded="true" signature="16:115" ph="..." />
+                <marker date="1540724589946" expanded="true" signature="283:398" ph="..." />
+                <marker date="1540724589946" expanded="true" signature="430:439" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/Player.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#226#271#0" />
+                <element signature="e#326#348#0" />
+                <element signature="e#453#495#0" />
+                <marker date="1540726872312" expanded="true" signature="54:59" ph="..." />
               </folding>
             </state>
           </provider>
@@ -162,8 +171,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/enums/GameControls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="352">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <marker date="1540723898477" expanded="true" signature="66:67" ph="..." />
               </folding>
@@ -250,6 +259,7 @@
         <option value="$PROJECT_DIR$/enums/GameControls.py" />
         <option value="$PROJECT_DIR$/cogs/GameCommands.py" />
         <option value="$PROJECT_DIR$/model/Character.py" />
+        <option value="$PROJECT_DIR$/model/Player.py" />
       </list>
     </option>
   </component>
@@ -324,6 +334,35 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Player" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="game_v1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/Player.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Player" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="StructureViewFactory">
     <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
@@ -465,7 +504,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540655024974</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Interface weapon part 1">
+      <created>1540724434018</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1540724434019</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Interface weapon part 1">
+      <created>1540724482162</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1540724482162</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -481,12 +534,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6885593" visible="true" weight="0.24739583" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6885593" visible="true" weight="0.24739583" />
       <window_info id="Structure" order="1" sideWeight="0.31144068" side_tool="true" weight="0.24010417" />
       <window_info id="Favorites" order="2" sideWeight="0.31144068" side_tool="true" weight="0.24010417" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32944915" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32944915" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.59002167" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -572,7 +625,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
     <MESSAGE value="Interface weapon part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interface weapon part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/GameHandler.py" />
@@ -651,16 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enums/GameControls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <marker date="1540723898477" expanded="true" signature="66:67" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cogs/GameCommands.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -671,19 +714,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/enums/GameControls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <marker date="1540723898477" expanded="true" signature="66:67" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/Character.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="330">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
           <folding>
+            <element signature="e#163#249#0" />
             <element signature="e#250#350#0" />
             <element signature="e#391#579#0" />
             <element signature="e#640#819#0" />
             <element signature="e#834#1400#0" />
-            <marker date="1540724429786" expanded="true" signature="16:21" ph="..." />
-            <marker date="1540724429786" expanded="true" signature="16:115" ph="..." />
-            <marker date="1540724429786" expanded="true" signature="241:356" ph="..." />
-            <marker date="1540724429786" expanded="true" signature="388:397" ph="..." />
+            <marker date="1540724589946" expanded="true" signature="16:21" ph="..." />
+            <marker date="1540724589946" expanded="true" signature="16:115" ph="..." />
+            <marker date="1540724589946" expanded="true" signature="283:398" ph="..." />
+            <marker date="1540724589946" expanded="true" signature="430:439" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#226#271#0" />
+            <element signature="e#326#348#0" />
+            <element signature="e#453#495#0" />
+            <marker date="1540726872312" expanded="true" signature="54:59" ph="..." />
           </folding>
         </state>
       </provider>

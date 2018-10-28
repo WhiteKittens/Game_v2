@@ -7,6 +7,8 @@ class Character:
     def __init__(self, character_name):
         self.character_name = character_name
 
+        self._init_character_inventory()
+
     def _init_character_inventory(self):
         for slot in range(self.EQUIPMENT_SLOTS):
             self.worn_equipment[slot] = None
@@ -38,4 +40,3 @@ class Character:
                 self.worn_equipment[slot] = None
         self.worn_equipment[int(slots([slots][0]))] = equipment
         return True
-
