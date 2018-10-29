@@ -30,16 +30,24 @@ class PrintHandler:
 
     async def get_print_options(self, text, options, game_handler, ctx):
         current_selected = 0
+        header = ""
+        for line in text:
+            header += line
+        header += "\n"
         while True:
-            option_string = ""
+            option_string = header
+
             for option in range(len(list(options))):
-                option_string += list(options)[option]
+                option_string += (list(options)[option])
                 if current_selected == option:
                     option_string += " <<--"
                 option_string += "\n"
             await ctx.bot.edit_message(game_handler.msg_screen, self.print((option_string + "\n").split("\n"), ctx))
+
             emoji = await game_handler.wait_on_control(
-                [GameControls.SWORDS.value[0], GameControls.DOWN.value[0], GameControls.UP.value[0]])
+                [GameControls.SWORDS.value[0], GameControls.DOWN.value[0], GameControls.UP.value[0],
+                 GameControls.SHIELD.value[0]])
+
             if emoji == GameControls.UP.value[0]:
                 current_selected -= 1
                 if current_selected == -1:
@@ -50,3 +58,8 @@ class PrintHandler:
                     current_selected = 0
             elif emoji == GameControls.SWORDS.value[0]:
                 return list(options)[current_selected]
+            elif emoji == GameControls.SHIELD.value[0]:
+                return None
+
+    def open(self, file_name):
+        return open((self.PATH + file_name).replace("/", "\\"))

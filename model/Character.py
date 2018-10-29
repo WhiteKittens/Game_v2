@@ -42,4 +42,4 @@ class Character:
         return True
 
     def __str__(self):
-        return "%s level: %d" % self.character_name, self.character_level
+        return "%s level: %d" % (self.character_name, self.character_level)

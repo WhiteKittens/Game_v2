@@ -3,5 +3,9 @@ Welcome to Quinten & legendary Tomato #player
 
 
 You already have some characters!
+select your character from the list below
+
+use the arrows and sword to select
+to create a new character press shield
 
 =======================================================
