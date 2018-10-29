@@ -22,3 +22,6 @@ class Player:
 
     def player_has_character(self):
         return len(self.characters) != 0
+
+    def __str__(self):
+        return self.player_id

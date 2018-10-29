@@ -1,32 +1,47 @@
+from discord import Embed
+
 from enums.GameControls import GameControls
 
 
 class PrintHandler:
+    TOP_SIZE = 10
+    BOT_SIZE = 20
     PATH = "Dialogue/"
+    IMAGE_PATH = "pictures/"
     SPACES = 56
 
     def __init__(self):
         self.header_footer = "`||" + "=" * 57 + "|| `\n"
 
-    def print_file(self, file_name, ctx):
-        file = open((self.PATH + file_name).replace("/", "\\"))
-        return self.print(file, ctx)
+    async def handle_screen(self, ctx, msg, image, screen):
+        await self.set_image(image, screen.value[10], ctx)
+        if screen.value[9] is not None:
+            header = await self.get_header(screen.value[9], ctx)
+        else:
+            header = "Still not done i guess"
 
-    def print(self, file, ctx):
-        return_help = self.header_footer
+        await ctx.bot.edit_message(msg, header)
+
+    @staticmethod
+    async def set_image(image, url, ctx):
+        await ctx.bot.edit_message(image, new_content="", embed=Embed().set_image(url=url))
+
+    async def get_header(self, file_name, ctx):
+        final_header = self.header_footer
+        file = open((self.PATH + file_name).replace("/", "\\"))
         for line in file:
             line = line.replace("#player", ctx.message.author.display_name).replace("\n", "").replace("\t", " " * 3)
             line += " " * (self.SPACES - len(line)) + "||`"
             line = "`|| " + line
             line += "\n"
-            return_help += line
-        if return_help.count("\n") < 30:
-            return_help += self.header_footer
-            return_help += ("`|| " + (" " * self.SPACES) + "||`\n") * (30 - return_help.count("\n") - 1)
-        return return_help + self.header_footer
+            final_header += line
+        return self.add_length(final_header, self.TOP_SIZE)
 
-    def print_equipment(self, equipment, ctx):
-        return self.print(str(equipment).split("\n"), ctx)
+    def add_length(self, msg, length):
+        if msg.count("\n") < 30:
+            msg += ("`|| " + (" " * self.SPACES) + "||`\n") * (length - msg.count("\n") - 1)
+            msg += self.header_footer
+        return msg
 
     async def get_print_options(self, text, options, game_handler, ctx):
         current_selected = 0
@@ -36,7 +51,6 @@ class PrintHandler:
         header += "\n"
         while True:
             option_string = header
-
             for option in range(len(list(options))):
                 option_string += (list(options)[option])
                 if current_selected == option:
@@ -60,6 +74,3 @@ class PrintHandler:
                 return list(options)[current_selected]
             elif emoji == GameControls.SHIELD.value[0]:
                 return None
-
-    def open(self, file_name):
-        return open((self.PATH + file_name).replace("/", "\\"))
