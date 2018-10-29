@@ -31,10 +31,12 @@ class GameHandler:
             emoji = await self.wait_on_control(GameControls.SWORDS.value[0])
             if emoji == GameControls.SWORDS.value[0]:
                 self.player.create_character("Test")
+                self.player.create_character("teest24")
+                self.player.create_character("hjsdbfbfsdbfh")
                 await self.login_screen()
         else:
             welcome = self.x.print_file("WelcomeBackScreen.txt", self.ctx)
-            await self.ctx.bot.edit_message(self.msg_screen, welcome)
+            await self.x.get_print_options(welcome, self.player.get_characters(), self, self.ctx)
         await self.wait_on_control(GameControls.all_emojis())
 
     async def wait_on_control(self, expected):

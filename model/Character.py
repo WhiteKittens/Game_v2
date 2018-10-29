@@ -6,7 +6,7 @@ class Character:
         self.character_name = character_name
         self.worn_equipment = []
         self.character_inventory = []
-
+        self.character_level = 1
         self._init_character_inventory()
 
     def _init_character_inventory(self):
@@ -40,3 +40,6 @@ class Character:
                 self.worn_equipment[slot] = None
         self.worn_equipment[int(slots([slots][0]))] = equipment
         return True
+
+    def __str__(self):
+        return "%s level: %d" % self.character_name, self.character_level
