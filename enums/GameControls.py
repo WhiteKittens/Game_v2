@@ -21,3 +21,10 @@ class GameControls(Enum):
         for emoji in list(cls):
             return_list += [emoji.value[0]]
         return return_list
+
+    @classmethod
+    def get_emojis(cls, searched):
+        for emoji in list(cls):
+            if emoji.value[0] == searched:
+                return emoji.value[1]
+        return None

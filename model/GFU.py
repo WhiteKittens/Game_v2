@@ -19,7 +19,16 @@ class GFU:
         self.image = image
         self.msg = msg
         self.print_handler = print_handler
-        await self.login_screen()
+        await self.welcome_screen()
 
-    async def login_screen(self):
-        await self.print_handler.handle_screen(self.ctx, self.msg, self.image, GameControlSettings.WELCOME_SCREEN)
+    async def welcome_screen(self):
+        val = await self.print_handler.handle_screen(self.ctx, self.msg, self.image, GameControlSettings.WELCOME_SCREEN)
+        if val == 0:
+            await self.character_selection()
+        elif val == 1:
+            await self.print_handler.cleanup(self.ctx, self.image, self.msg)
+            return
+        return
+
+    def character_selection(self):
+        pass

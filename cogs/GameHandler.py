@@ -42,13 +42,7 @@
 #                 self.player.set_current_character(response)
 #         await self.wait_on_control(GameControls.all_emojis())
 #
-#     async def wait_on_control(self, expected):
-#         done = False
-#         while not done:
-#             reaction = await self.ctx.bot.wait_for_reaction(GameControls.all_emojis(), message=self.msg)
-#             await self.ctx.bot.remove_reaction(self.msg, reaction.reaction.emoji, reaction.user)
-#             if reaction.reaction.emoji in expected:
-#                 return reaction.reaction.emoji
+#
 #         return None
 #
 #     async def init_image(self):

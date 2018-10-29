@@ -13,18 +13,40 @@ class PrintHandler:
     def __init__(self):
         self.header_footer = "`||" + "=" * 57 + "|| `\n"
 
-    async def handle_screen(self, ctx, msg, image, screen):
+    async def handle_screen(self, ctx, msg, image, screen, items=None, selected=0):
         await self.set_image(image, screen.value[10], ctx)
         if screen.value[9] is not None:
             header = await self.get_header(screen.value[9], ctx)
         else:
             header = "Still not done i guess"
+        if screen.value[11] is None:
+            footer = self.add_length("", self.BOT_SIZE)
+        elif screen.value[11] == "selector_list":
+            footer = "Still i fcked up"
+        else:
+            footer = "xd"
+        await ctx.bot.edit_message(msg, header + footer)
 
-        await ctx.bot.edit_message(msg, header)
+    @staticmethod
+    async def cleanup(ctx, image, msg):
+        await ctx.bot.delete_message(image)
+        await ctx.bot.delete_message(msg)
+
+    @staticmethod
+    async def wait_on_control(ctx, image):
+        done = False
+        while not done:
+            reaction = await ctx.bot.wait_for_reaction(GameControls.all_emojis(), message=image)
+            await ctx.bot.remove_reaction(image, reaction.reaction.emoji, reaction.user)
+            key = GameControls.get_emojis(reaction.reaction.emoji)
+            if key is not None:
+                return key
+        return
 
     @staticmethod
     async def set_image(image, url, ctx):
-        await ctx.bot.edit_message(image, new_content="", embed=Embed().set_image(url=url))
+        await ctx.bot.edit_message(image, new_content=ctx.message.author.display_name + "'s game session:",
+                                   embed=Embed().set_image(url=url))
 
     async def get_header(self, file_name, ctx):
         final_header = self.header_footer
@@ -42,35 +64,3 @@ class PrintHandler:
             msg += ("`|| " + (" " * self.SPACES) + "||`\n") * (length - msg.count("\n") - 1)
             msg += self.header_footer
         return msg
-
-    async def get_print_options(self, text, options, game_handler, ctx):
-        current_selected = 0
-        header = ""
-        for line in text:
-            header += line
-        header += "\n"
-        while True:
-            option_string = header
-            for option in range(len(list(options))):
-                option_string += (list(options)[option])
-                if current_selected == option:
-                    option_string += " <<--"
-                option_string += "\n"
-            await ctx.bot.edit_message(game_handler.msg_screen, self.print((option_string + "\n").split("\n"), ctx))
-
-            emoji = await game_handler.wait_on_control(
-                [GameControls.SWORDS.value[0], GameControls.DOWN.value[0], GameControls.UP.value[0],
-                 GameControls.SHIELD.value[0]])
-
-            if emoji == GameControls.UP.value[0]:
-                current_selected -= 1
-                if current_selected == -1:
-                    current_selected = len(list(options)) - 1
-            elif emoji == GameControls.DOWN.value[0]:
-                current_selected += 1
-                if current_selected == len(list(options)):
-                    current_selected = 0
-            elif emoji == GameControls.SWORDS.value[0]:
-                return list(options)[current_selected]
-            elif emoji == GameControls.SHIELD.value[0]:
-                return None

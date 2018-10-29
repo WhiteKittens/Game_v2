@@ -15,6 +15,7 @@ class GameHandlerV2:
 
     @client.command(pass_context=True)
     async def game(self, ctx):
+        await ctx.bot.delete_message(ctx.message)
         image = await ctx.bot.say("Hello welcome to the game!")
         msg = await ctx.bot.say("loading game settings!")
         await self.init_reactions(ctx, image)
