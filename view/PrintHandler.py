@@ -26,6 +26,8 @@ class PrintHandler:
         else:
             footer = "xd"
         await ctx.bot.edit_message(msg, header + footer)
+        val = await self.wait_on_control(ctx, image, screen)
+        return val
 
     @staticmethod
     async def cleanup(ctx, image, msg):
@@ -33,14 +35,14 @@ class PrintHandler:
         await ctx.bot.delete_message(msg)
 
     @staticmethod
-    async def wait_on_control(ctx, image):
+    async def wait_on_control(ctx, image, screen):
         done = False
         while not done:
             reaction = await ctx.bot.wait_for_reaction(GameControls.all_emojis(), message=image)
             await ctx.bot.remove_reaction(image, reaction.reaction.emoji, reaction.user)
             key = GameControls.get_emojis(reaction.reaction.emoji)
             if key is not None:
-                return key
+                return screen.value[key]
         return
 
     @staticmethod
