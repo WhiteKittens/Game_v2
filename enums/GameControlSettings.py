@@ -8,5 +8,6 @@ class GameControlSettings(Enum):
     """
     WELCOME_SCREEN = None, None, None, None, 0, 1, None, None, None, 'WELCOME_SCREEN', \
                      'https://cdn.discordapp.com/attachments/355395847392985091/506151408488284173/2.png', None
-    CHARACTER_SELECTION = 0, 1, None, None, 2, 3, 4, None, None, 'CHARACTER_SELECTION', 'DarkForest.png', \
+    CHARACTER_SELECTION = 0, 1, None, None, 2, 3, 4, None, None, 'CHARACTER_SELECTION', \
+                          'https://cdn.discordapp.com/attachments/505792603430715395/505793280248905743/latest.png', \
                           "selector_list"

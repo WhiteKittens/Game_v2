@@ -22,12 +22,26 @@ class PrintHandler:
         if screen.value[11] is None:
             footer = self.add_length("", self.BOT_SIZE)
         elif screen.value[11] == "selector_list":
-            footer = "Still i fcked up"
+            footer = self.selector_list_footer(items, selected, ctx)
         else:
             footer = "xd"
         await ctx.bot.edit_message(msg, header + footer)
         val = await self.wait_on_control(ctx, image, screen)
         return val
+
+    def selector_list_footer(self, items, selected, ctx):
+        footer = ""
+        for item in range(len(items)):
+            line = list(items)[item].replace("#player", ctx.message.author.display_name).replace("\n", "").replace(
+                "\t", " " * 3)
+            if item == selected:
+                line += " <<--"
+            line += " " * (self.SPACES - len(line)) + "||`"
+            line = "`|| " + line
+            line += "\n"
+            footer += line
+
+        return self.add_length(footer, self.BOT_SIZE)
 
     @staticmethod
     async def cleanup(ctx, image, msg):

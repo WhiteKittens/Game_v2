@@ -30,5 +30,29 @@ class GFU:
             return
         return
 
-    def character_selection(self):
-        pass
+    async def character_selection(self):
+        selected = 0
+        val = 0
+        while val in [0, 1, 3, 4]:
+            val = await self.print_handler.handle_screen(self.ctx, self.msg, self.image,
+                                                         GameControlSettings.CHARACTER_SELECTION,
+                                                         self.player.get_characters(), selected)
+            if val == 0:
+                if self.player.player_has_character():
+                    selected -= 1
+                    if selected < 0:
+                        selected = len(self.player.get_characters()) - 1
+            elif val == 1:
+                if self.player.player_has_character():
+                    selected += 1
+                if selected == len(self.player.characters):
+                    selected = 0
+            elif val == 2:
+                self.player.set_current_character(list(self.player.get_characters())[selected])
+            elif val == 3:
+                self.player.create_character(self.ctx.message.author.display_name)
+                selected = len(self.player.get_characters()) - 1
+            elif val == 4:
+                self.player.set_current_character(list(self.player.get_characters())[selected])
+                selected -= 1
+        return
