@@ -11,3 +11,6 @@ class GameControlSettings(Enum):
     CHARACTER_SELECTION = 0, 1, None, None, 2, 3, 4, None, None, 'CHARACTER_SELECTION', \
                           'https://cdn.discordapp.com/attachments/505792603430715395/505793280248905743/latest.png', \
                           "selector_list"
+    MAIN_MENU = 0, 1, None, None, 2, 3, None, 4, 5, \
+                "MAIN_MENU", 'https://cdn.discordapp.com/attachments/505792603430715395/505793280248905743/latest.png', \
+                "selector_list", ["Inventory", "Set spells", "Shop", "coming soon", "..."]

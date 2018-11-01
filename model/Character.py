@@ -1,17 +1,37 @@
+from enums.Attributes import Attributes
+from enums.Stats import Stats
+
+
 class Character:
     EQUIPMENT_SLOTS = 5
     ITEM_STORAGE = 20
 
     def __init__(self, character_name):
+        self.available_points = 10
+        self.base_stats = dict()
+        self.character_stats = dict()
         self.character_name = character_name
         self.worn_equipment = []
         self.character_inventory = []
         self.character_level = 1
-        self._init_character_inventory()
+        self._init_worn_equip_and_stats()
 
-    def _init_character_inventory(self):
+    def allocate_points(self, amount, stat):
+        self.base_stats[stat] += amount
+        if self.available_points >= amount:
+            self.available_points -= amount
+            self.base_stats[stat] += amount
+            return True
+        return self.available_points
+
+    def _init_worn_equip_and_stats(self):
         for slot in range(self.EQUIPMENT_SLOTS):
             self.worn_equipment += [None]
+        for full_stat in list(Stats) + list(Attributes):
+            self.character_stats[full_stat] = 0
+        for stat in list(Stats):
+            self.base_stats[stat] = 5
+            self.character_stats[stat] = 5
         return
 
     def store_item(self, equipment):
@@ -43,3 +63,12 @@ class Character:
 
     def __str__(self):
         return "%s level: %d" % (self.character_name, self.character_level)
+
+    def unequip_item(self, equipment):
+        if len(self.character_inventory) < self.ITEM_STORAGE:
+            self.character_inventory.append(equipment)
+            self.worn_equipment[equipment.get_equipment_type().value[1]] = None
+            return True
+        return False
+
+    def calculate_full_stats(self):

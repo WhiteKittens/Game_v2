@@ -49,6 +49,7 @@ class GFU:
                     selected = 0
             elif val == 2:
                 self.player.set_current_character(list(self.player.get_characters())[selected])
+                await self.main_menu()
             elif val == 3:
                 self.player.create_character(self.ctx.message.author.display_name)
                 selected = len(self.player.get_characters()) - 1
@@ -56,3 +57,32 @@ class GFU:
                 self.player.set_current_character(list(self.player.get_characters())[selected])
                 selected -= 1
         return
+
+    async def main_menu(self):
+        selected = 0
+        val = 0
+        while val in [0, 1]:
+            val = await self.print_handler.handle_screen(self.ctx, self.msg, self.image,
+                                                         GameControlSettings.MAIN_MENU,
+                                                         GameControlSettings.MAIN_MENU.value[12], selected)
+            if val == 0:
+                    selected -= 1
+                    if selected < 0:
+                        selected = len(GameControlSettings.MAIN_MENU.value[12]) - 1
+            elif val == 1:
+                selected += 1
+                if selected == len(GameControlSettings.MAIN_MENU.value[12]):
+                    selected = 0
+            elif val == 2:
+                if selected == 0:
+                    pass
+                elif selected == 1:
+                    pass
+            elif val == 3:
+                await self.character_selection()
+            elif val == 4:
+                # show stats
+                pass
+            elif val == 5:
+                # map
+                pass
