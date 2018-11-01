@@ -72,3 +72,13 @@ class Character:
         return False
 
     def calculate_full_stats(self):
+        for full_stat in list(Stats) + list(Attributes):
+            self.character_stats[full_stat] = 0
+
+        for stat in self.base_stats:
+            self.character_stats[stat] += self.base_stats[stat]
+        for item in self.worn_equipment:
+            if item is not None:
+                for stat in item.get_stats():
+                    self.character_stats[stat] += item.get_stats[stat]
+        return True

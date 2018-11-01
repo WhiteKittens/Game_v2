@@ -47,6 +47,7 @@ class Rarity(Enum):
         full_list = dict()
         for stat in self.random_stats() + self.random_attributes(equipment.get_equipment_type()):
             tier = EquipmentTier.random_tier(equipment.get_equipment_level(), floor_rarity)
-            value = randint(tier.value[2][0], tier.value[2][1]) * stat.value[2]
+            slot_bonus = (len(equipment.get_equipment_type().value[1]) +1) / 2
+            value = randint(tier.value[2][0], tier.value[2][1]) * stat.value[2] * slot_bonus
             full_list[stat.name] = (tier, value)
         return full_list
