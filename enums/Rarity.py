@@ -47,7 +47,20 @@ class Rarity(Enum):
         full_list = dict()
         for stat in self.random_stats() + self.random_attributes(equipment.get_equipment_type()):
             tier = EquipmentTier.random_tier(equipment.get_equipment_level(), floor_rarity)
-            slot_bonus = (len(equipment.get_equipment_type().value[1]) +1) / 2
+            if equipment.get_equipment_type().value[1] is tuple:
+                slot_bonus = 1.5
+            else:
+                slot_bonus = 1
             value = randint(tier.value[2][0], tier.value[2][1]) * stat.value[2] * slot_bonus
             full_list[stat.name] = (tier, value)
         return full_list
+
+    def __int__(self):
+        return self.value[0]
+
+    @classmethod
+    def get_rarity(cls, id):
+        for rarity in list(cls):
+            if int(rarity) == id:
+                return rarity
+        return None

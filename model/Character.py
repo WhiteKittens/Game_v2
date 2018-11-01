@@ -7,6 +7,7 @@ class Character:
     ITEM_STORAGE = 20
 
     def __init__(self, character_name):
+
         self.available_points = 10
         self.base_stats = dict()
         self.character_stats = dict()
@@ -59,6 +60,7 @@ class Character:
                 self.store_item(self.worn_equipment[slot])
                 self.worn_equipment[slot] = None
         self.worn_equipment[int(slots([slots][0]))] = equipment
+        self.calculate_full_stats()
         return True
 
     def __str__(self):
@@ -68,6 +70,7 @@ class Character:
         if len(self.character_inventory) < self.ITEM_STORAGE:
             self.character_inventory.append(equipment)
             self.worn_equipment[equipment.get_equipment_type().value[1]] = None
+            self.calculate_full_stats()
             return True
         return False
 
@@ -82,3 +85,11 @@ class Character:
                 for stat in item.get_stats():
                     self.character_stats[stat] += item.get_stats[stat]
         return True
+
+    def get_stats(self):
+        return_list = dict()
+        for stat in self.character_stats:
+            if self.character_stats[stat] != 0:
+                return_list[stat] = self.character_stats[stat]
+        return return_list
+

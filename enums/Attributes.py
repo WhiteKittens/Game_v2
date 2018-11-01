@@ -24,3 +24,16 @@ class Attributes(Enum):
     elemental_bonus = 13, True, 1
     armor_penetration = 14, True, 1
     life = 15, False, 1
+
+    def __int__(self):
+        return self.value[0]
+
+    def __str__(self):
+        return self.name
+
+    @classmethod
+    def get_attribute(cls, id):
+        for attribute in list(cls):
+            if int(attribute) == id - 65:
+                return attribute
+        return None

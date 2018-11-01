@@ -19,6 +19,9 @@ class EquipmentTier(Enum):
     tier_5 = 5, 75, (5, 7), "Tier 5", 5
     tier_6 = 6, 110, (1, 3), "Tier 6", 1
 
+    def __int__(self):
+        return self.value[0]
+
     @classmethod
     def random_tier(cls, item_level, floor_rarity=1):
         full_list = []
@@ -26,3 +29,10 @@ class EquipmentTier(Enum):
             if (floor_rarity - 40) <= tier.value[4] <= item_level:
                 full_list += [tier] * tier.value[1]
         return choice(full_list)
+
+    @classmethod
+    def get_tier(cls, id):
+        for tier in list(cls):
+            if int(tier) == id:
+                return tier
+        return None

@@ -22,8 +22,11 @@ class EquipmentType(Enum):
     Two_handed_axe = 9, (0, 1)
     One_handed_axe = 10, 0
 
+    def __int__(self):
+        return self.value[0]
+
     def base_damage(self, item_level):
-        return log2(len(self.value[1])**2 * (item_level + 7))
+        return log2(len(self.value[1]) ** 2 * (item_level + 7))
 
     def is_weapon(self):
         return (not isinstance(self.value[1], int)) or (self.value[1] == 0)
@@ -31,3 +34,10 @@ class EquipmentType(Enum):
     @classmethod
     def random_equipment_type(cls):
         return choice(list(cls))
+
+    @classmethod
+    def get_equipment_type(cls, id):
+        for equipment in list(cls):
+            if int(equipment) == id - 65:
+                return equipment
+        return None
