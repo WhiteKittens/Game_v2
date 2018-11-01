@@ -10,12 +10,13 @@ class Equipment:
         self.item_level = item_level
         self.equipment_type = EquipmentType.random_equipment_type()
         self.initialise_random(rarity_floor)
+        self.name = ""
 
     def __str__(self):
         return_string = ""
         return_string += "%s:\n" % self.equipment_type.name.replace("_", " ")
         return_string += "  Rarity: %s\n\titemlevel: %s" % (
-        self.rarity.name.lower().replace("_", " ").capitalize(), self.item_level)
+            self.rarity.name.lower().replace("_", " ").capitalize(), self.item_level)
         for stat in self.equipment_stats:
             return_string += "\n\t\t%-8s%-28s:  %6.0f" % (
                 self.equipment_stats[stat][0].value[3], str(stat).lower().replace("_", " "),
@@ -54,8 +55,12 @@ class Equipment:
             print(val_tuple)
             str_equipment = str_equipment[6:]
 
-
-a = "3J0x01A00xf8C30xf7A00xf8B40x02C00xf8"
-e = Equipment()
-e.full_import(a)
-print(e)
+    def encrypt(self):
+        encryption = str(self.rarity.value[0])
+        encryption += str(chr(self.equipment_type.value[0] + 65))
+        encryption += '0x%02X' % self.item_level
+        for stat in self.equipment_stats:
+            encryption += chr(stat.value[0] + 65)
+            encryption += str(self.equipment_stats[stat][0].value[0])
+            encryption += str('0x%02X' % self.equipment_stats[stat][1])
+        return encryption
