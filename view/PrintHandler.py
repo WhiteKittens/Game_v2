@@ -1,11 +1,11 @@
 from discord import Embed
-
+from time import sleep
 from enums.GameControls import GameControls
 
 
 class PrintHandler:
-    TOP_SIZE = 10
-    BOT_SIZE = 20
+    TOP_SIZE = 8
+    BOT_SIZE = 12
     PATH = "Dialogue/"
     IMAGE_PATH = "pictures/"
     SPACES = 56

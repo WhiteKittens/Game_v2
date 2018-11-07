@@ -26,7 +26,7 @@ class EquipmentType(Enum):
         return self.value[0]
 
     def base_damage(self, item_level):
-        return log2(len(self.value[1]) ** 2 * (item_level + 7))
+        return log2(len(self.value[1]) ** item_level * (item_level + 7))
 
     def is_weapon(self):
         return (not isinstance(self.value[1], int)) or (self.value[1] == 0)

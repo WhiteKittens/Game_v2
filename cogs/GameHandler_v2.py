@@ -1,5 +1,6 @@
 from discord.ext.commands import bot
 
+from data.PerpetualTimer import PerpetualTimer
 from enums.GameControls import GameControls
 from model.GFU import GFU
 from view.PrintHandler import PrintHandler
@@ -12,6 +13,8 @@ class GameHandlerV2:
     def __init__(self, init_bot):
         self.init_bot = init_bot
         self.players = []
+        self.t = PerpetualTimer(20, self.save_player_data)
+        self.t.start()
 
     @client.command(pass_context=True)
     async def game(self, ctx):
@@ -27,11 +30,16 @@ class GameHandlerV2:
         self.players += [player]
         await player.set_ctx(ctx, image, msg, self.printHandler)
 
+    def save_player_data(self):
+        for player in self.players:
+            player.get_player().save_player()
+
     def load_player_data(self, ctx):
         pass
 
     @staticmethod
     async def init_reactions(ctx, image):
+
         for smiley in list(GameControls):
             await ctx.bot.add_reaction(image, smiley.value[0])
 

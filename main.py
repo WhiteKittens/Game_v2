@@ -6,7 +6,7 @@ from pathlib import Path
 
 import discord
 from discord.ext import commands
-
+import time
 
 def config_load():
     with open('data/config.json', 'r', encoding='utf-8') as doc:
@@ -83,8 +83,7 @@ class Bot(commands.Bot):
         self.app_info = await self.application_info()
         print(f'Logged in as: {self.user.name}\n'
               f'Using discord.py version: {discord.__version__}\n'
-              f'Owner: {self.app_info.owner}\n'
-              f'Template Maker: SourSpoon / Spoon#7805')
+              f'Owner: {self.app_info.owner}\n')
         print('-' * 10)
 
     async def on_message(self, message):

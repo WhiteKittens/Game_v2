@@ -8,13 +8,12 @@ class Attributes(Enum):
     1) True weapon only     False armour only     None both
     2) Base value
     """
-    critical_strike_chance = 0, True, 1
-    critical_strike_multiplier = 1, True, 1
+    critical_strike_chance = 0, True, 2
+    critical_strike_multiplier = 1, True, 3
     global_damage_multiplier = 2, False, 1
     life_steal = 3, True, 1
     energy_regen = 4, None, 1
     max_energy = 5, None, 1
-    percent_life = 6, False, 1
     armor = 7, False, 1
     evasion_rating = 8, False, 1
     poison = 9, True, 1

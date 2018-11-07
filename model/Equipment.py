@@ -52,7 +52,6 @@ class Equipment:
             val_tuple = (EquipmentTier.get_tier(int(str_equipment[1:2])),
                          int(str_equipment[2:6], 16))
             self.equipment_stats[Attributes.get_attribute(ord(str_equipment[0:1]))] = val_tuple
-            print(val_tuple)
             str_equipment = str_equipment[6:]
 
     def encrypt(self):

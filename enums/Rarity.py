@@ -52,7 +52,7 @@ class Rarity(Enum):
             else:
                 slot_bonus = 1
             value = randint(tier.value[2][0], tier.value[2][1]) * stat.value[2] * slot_bonus
-            full_list[stat.name] = (tier, value)
+            full_list[stat] = (tier, value)
         return full_list
 
     def __int__(self):

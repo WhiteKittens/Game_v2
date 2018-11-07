@@ -66,9 +66,9 @@ class GFU:
                                                          GameControlSettings.MAIN_MENU,
                                                          GameControlSettings.MAIN_MENU.value[12], selected)
             if val == 0:
-                    selected -= 1
-                    if selected < 0:
-                        selected = len(GameControlSettings.MAIN_MENU.value[12]) - 1
+                selected -= 1
+                if selected < 0:
+                    selected = len(GameControlSettings.MAIN_MENU.value[12]) - 1
             elif val == 1:
                 selected += 1
                 if selected == len(GameControlSettings.MAIN_MENU.value[12]):
@@ -86,3 +86,6 @@ class GFU:
             elif val == 5:
                 # map
                 pass
+
+    def get_player(self):
+        return self.player
